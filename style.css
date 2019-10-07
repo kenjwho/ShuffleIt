@@ -1,0 +1,127 @@
+.game-wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game {
+  width: 50vh;
+  height: 50vh;
+  background: #fff;
+  position: relative;
+  border: 3px solid #fff;
+  /* display: flex;
+  flex-wrap: wrap;*/
+}
+
+.tile {
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+  background-color: white;
+  position: absolute;
+  border: 1px solid white;
+  margin: 0;
+  padding: 0;
+  /* background-image: url("https://scontent-atl3-1.cdninstagram.com/vp/89d94be8d19cb23f7af51c367b2a4a05/5E2BF482/t51.2885-15/e35/s1080x1080/70657334_983171822027558_5164702872260107689_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=102"); */
+  /* background-image: url("https://picsum.photos/900"); */
+  background-size: 300%;
+  top: calc(100% / 3);
+  left: 0;
+  bottom: auto;
+  right: auto;
+  cursor: pointer;
+  /* transition: all 0.5s ease; */
+}
+
+.tile:nth-child(3n + 2) {
+  left: calc(100% / 3);
+}
+
+.tile:nth-child(3n + 3) {
+  left: calc((100% / 3) * 2);
+}
+
+.tile:nth-child(-n + 3) {
+  top: 0;
+}
+
+.tile:nth-child(n + 7) {
+  top: calc((100% / 3) * 2);
+}
+
+.tile[data-id="1"] {
+  background-position-x: 0;
+  background-position-y: 0;
+}
+
+.tile[data-id="2"] {
+  background-position-x: 50%;
+  background-position-y: 0;
+}
+
+.tile[data-id="3"] {
+  background-position-x: 100%;
+  background-position-y: 0;
+}
+
+.tile[data-id="4"] {
+  background-position-x: 0;
+  background-position-y: 50%;
+}
+
+.tile[data-id="5"] {
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.tile[data-id="6"] {
+  background-position-x: 100%;
+  background-position-y: 50%;
+}
+
+.tile[data-id="7"] {
+  background-position-x: 0;
+  background-position-y: 100%;
+}
+
+.tile[data-id="8"] {
+  background-position-x: 50%;
+  background-position-y: 0100%;
+}
+
+.tile[data-id="9"] {
+  background-position-x: 100%;
+  background-position-y: 100%;
+}
+
+.tile.blank {
+  /* background-image: none !important; */
+  opacity: 0;
+  cursor: default;
+}
+
+.styledButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-top: 10px;
+  width: 50vh;
+}
+.styledButtons button {
+  background-color: palevioletred;
+  color: #fff;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.styledButtons button:last-of-type {
+  background-color: powderblue;
+  color: #222;
+}
