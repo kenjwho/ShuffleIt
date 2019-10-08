@@ -12,7 +12,6 @@ assignPositions();
 function newImage(imgUrl) {
   var randomSize = Math.floor(getRandomNum(700,999));
   imgUrl = imgUrl ? imgUrl : `https://picsum.photos/${randomSize}`;
-  console.log('imgUrl:', imgUrl)
   tiles.forEach((tile) => {
     tile.style.backgroundImage = "url('')" // clear the url first since the image changes on new request
     tile.style.backgroundImage = `url(${imgUrl})`
