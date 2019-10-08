@@ -103,7 +103,7 @@ function getNumFromArray(array) {
 
 function startNewGame() {
   // Remove previus blank tile
-  resetBlankTile = document.querySelector(".blank").classList.remove('blank');
+  // resetBlankTile = document.querySelector(".blank").classList.remove('blank');
 
   // Assign new blank tile
   blankTile = correctAnswer[Math.floor(Math.random()*correctAnswer.length)] // Set blank tile
