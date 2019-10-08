@@ -1,7 +1,7 @@
 var correctAnswer = [1,2,3,4,5,6,7,8,9];
 var board = document.getElementById('board');
 var tiles = document.querySelectorAll(".tile")
-var winnerImg = "http://giphygifs.s3.amazonaws.com/media/5xaOcLLyNsTBTjfM5DG/giphy.gif"
+var winnerImg = "https://giphygifs.s3.amazonaws.com/media/5xaOcLLyNsTBTjfM5DG/giphy.gif"
 
 // newImage("https://scontent-atl3-1.cdninstagram.com/vp/89d94be8d19cb23f7af51c367b2a4a05/5E2BF482/t51.2885-15/e35/s1080x1080/70657334_983171822027558_5164702872260107689_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=102"); // set an img
 // newImage("https://scontent-atl3-1.cdninstagram.com/vp/55beb6e54bcca0504ac446d172e406bf/5E178A09/t51.2885-15/e35/51931772_618984781848963_2157883750484937648_n.jpg?_nc_ht=scontent-atl3-1.cdninstagram.com&_nc_cat=103"); // set an img
