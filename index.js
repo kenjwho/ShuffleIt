@@ -10,11 +10,17 @@ newImage("https://picsum.photos/900"); // set an img
 assignPositions();
 
 function newImage(imgUrl) {
-  imgUrl = imgUrl ? imgUrl : 'https://picsum.photos/900';
+  var randomSize = Math.floor(getRandomNum(700,999));
+  imgUrl = imgUrl ? imgUrl : `https://picsum.photos/${randomSize}`;
+  console.log('imgUrl:', imgUrl)
   tiles.forEach((tile) => {
     tile.style.backgroundImage = "url('')" // clear the url first since the image changes on new request
     tile.style.backgroundImage = `url(${imgUrl})`
   })
+}
+
+function getRandomNum(min, max) {
+  return Math.random() * (max - min) + min;
 }
 
 function shuffleBoard() {
@@ -84,7 +90,6 @@ function checkAsnwer() {
 
   // Since checking if arrays are equal is hardr than it should be...
   if (getNumFromArray(currentAnswer) === getNumFromArray(correctAnswer)) {
-    console.log("WINRAR");
     document.querySelector('body').style.backgroundImage = `url("${winnerImg}")`;
     return true;
   }
@@ -110,6 +115,8 @@ function startNewGame() {
   tiles[blankTile-1].classList.add("blank")
 
   shuffleBoard();
+  document.getElementById("start").disabled = true;
+  
   // newImage();
 }
 
