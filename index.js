@@ -86,7 +86,10 @@ function checkAsnwer() {
   if (getNumFromArray(currentAnswer) === getNumFromArray(correctAnswer)) {
     console.log("WINRAR");
     document.querySelector('body').style.backgroundImage = `url("${winnerImg}")`;
+    return true;
   }
+
+  return false;
 }
 
 function getNumFromArray(array) {
@@ -110,6 +113,15 @@ function startNewGame() {
   // newImage();
 }
 
+// function winnerWinnerChickenDinner() {
+//   for (let index = 0; index < 9999; index++) {
+    
+//     shuffleBoard();
+
+//     if (checkAsnwer())
+    
+//   }
+// }
 
 document.getElementById("start").addEventListener('click', startNewGame);
 document.getElementById("newImage").addEventListener('click', () => {
@@ -118,4 +130,16 @@ document.getElementById("newImage").addEventListener('click', () => {
 
 tiles.forEach((tile) => {
   tile.addEventListener('click', swapTiles);
+});
+
+// Handle uploads
+window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          // var img = document.querySelector('img');  // $('img')[0]
+          var imgUrl = URL.createObjectURL(this.files[0]); // set src to file url
+          newImage(imgUrl);
+          // img.onload = imageIsLoaded; // optional onload event listener
+      }
+  });
 });
